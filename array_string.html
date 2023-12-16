@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 3000px;">
+
+    <h2> JS STRING METHOD </h2>
+
+    <p id="demo"></p>
+
+    <script> 
+        let text = "12345678910";
+
+        document.getElementById("demo").innerHTML = text.length;
+    </script>
+    <br />  <br /> 
+
+    <!---------------------------------------------------->
+
+    <h3>JS touppercase()</h3>
+
+    <p id="demo1"></p>
+
+    <script>
+        let text1 = "Hello wd92p";
+        let result = text1.toUpperCase();
+
+        document.getElementById("demo1").innerHTML = result;
+    </script>
+
+<br />  <br /> 
+
+<!---------------------------------------------------->
+
+<h3> Javascript toLowerCase</h3>
+
+<p id="demo2"></p>
+
+<script>
+    let text2 = "HELLO WD92P";
+    let result1 = text2.toLowerCase();
+
+    document.getElementById("demo2").innerHTML = result1;
+
+</script>
+
+<br />  <br /> 
+
+<!---------------------------------------------------->
+
+<h2>JS concat()</h2>
+
+<p id="demo3"></p>
+
+<script>
+    let str1 = "Hello";
+    let str2 = "World";
+    let str3 = "!";
+    let result2 = str1.concat(" ",str2 ,str3);
+
+    document.getElementById("demo3").innerHTML = result2;
+
+</script>
+
+<br />  <br /> 
+
+<!---------------------------------------------------->
+
+<h2>Js Trim()</h2>
+
+<pre><p id="demo4"></p></pre>
+<pre><p id="demo5"> </p></pre>
+<script>
+    const str = "   Hello World!   ";
+    const trimmed = str.trim()
+
+    document.getElementById("demo4").innerHTML = str;
+    document.getElementById("demo5").innerHTML = trimmed;
+    </script>
+
+<br />  <br /> 
+
+<!---------------------------------------------------->
+<h2>JS Slice()</h2>
+<p id="demo11"></p>
+
+<script>
+    let str10 = "abcdefghijk";
+    let substring = str10.slice(2,4);
+
+    document.getElementById("demo11").innerHTML = substring;
+</script>
+
+<!---------------------------------------------------->
+
+<h3>JS Array Method</h3>
+
+<p id="demo6"></p>
+
+<script>
+    const student = ["Jorz", " Joel", " jomell"];
+    document.getElementById("demo6").innerHTML = student;
+</script>
+
+<br />  <br />
+
+<!---------------------------------------------------->
+
+<h3>JS Every Method</h3>
+
+<p id="demo7"> </p>
+
+<script>
+    const ages = [32, 33, 16];
+
+    document.getElementById("demo7").innerHTML = ages.every(checkage);
+
+    function checkage(age) {
+        return age > 15;
+    }
+</script>
+
+<br />  <br /> 
+
+<!---------------------------------------------------->
+
+<h3>JS Array fill()</h3>
+
+<p id="demo8"></p>
+
+<script>
+    const fruits = ["laptop", "Tablet", "Cellphone", "Desktop"];
+    document.getElementById("demo8").innerHTML = fruits.fill("Laptop");
+</script>
+
+<br />  <br /> 
+
+<!---------------------------------------------------->
+
+<h3>JS Filter Method</h3>
+
+<p id="demo9"></p>
+
+<script> /**This Remove comma**/
+    const ages1 = [32, 33, 26, 40];
+    const filteredAges = ages1.filter(checkAdult);
+    const resultString = filteredAges.join('./.');
+    document.getElementById("demo9").innerHTML = resultString;
+
+    function checkAdult(age) {
+        return age >= 18;
+    }
+</script>
+<br /> <br />
+<!----------------------------------------------------------->
+<h3>JS Filter Method</h3>
+
+<p id="demo10"></p>
+
+<script>
+    const ages2 = [32, 33,26, 40];
+    document.getElementById("demo10").innerHTML = ages2.filter(checkAdult);
+
+    function checkAdult(age) {
+        return age >= 18;
+    }
+</script> 
+
+
+</body>
+</html>

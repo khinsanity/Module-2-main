@@ -1,0 +1,117 @@
+BY TAGNAME
+<h2>JavaScript HTML DOM</h2>
+
+    <p>Finding HTML Elements by Tag Name.</p>
+    <p>Second Tag name</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    const element = document.getElementsByTagName("p");
+    
+    document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+    
+    </script>
+
+______________________________________________________________________________________
+BY CLASSNAME
+
+    <h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">Hello WD92P!!</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph with class="intro" is: ' + x[1].innerHTML;
+</script>
+
+//////////////////////////////////////////////////////////////////////////////////
+
+CHANGE ATTRIBUTE
+
+    <h2>Change attribute value</h2>
+    <img id="image" src="dogz.jpg" width="160" height="120">
+    
+    <script>
+    document.getElementById("image").src = "catz.png";
+    </script>
+__________________________________________________
+VIA BUTTON CHANGE
+
+<h2>JavaScript HTML DOM</h2>
+<img id="image" src="dogz.jpg" width="160" height="120">
+
+<button onclick="myFunction()">Change</button>
+
+<script>
+function myFunction() {
+  document.getElementById("image").src = "catz.png";
+}
+</script>
+______________________________________________________
+ CHANGE VIA HTML STYLE
+    <h2>JavaScript HTML DOM</h2>
+    <p>Changing the HTML style:</p>
+    
+    
+    <p id="p1">Hello WDP92P!</p>
+    <p id="p2">Hello WD920!</p>
+    
+    <script>
+    document.getElementById("p2").style.color = "blue";
+    document.getElementById("p2").style.fontFamily = "Arial";
+    document.getElementById("p2").style.fontSize = "50px";
+    </script>
+
+__________________________________________________________
+VIA EVENT
+<h1 id="heading">My Heading 1</h1>
+    <button type="button"
+    onclick="document.getElementById('heading').style.fontSize = '50px'">
+    Click Me!</button>
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="this.innerHTML='Hello Team!'">Click on this text!</h2>
+
+https://www.javatpoint.com/javascript-events 
+
+_________________________________________________________________________________
+ONCHANGE
+<p>Select list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Bread">Bread</option>
+  <option value="Coffee">Coffee</option>
+  <option value="Cake">Cake</option>
+
+</select>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+/////////////////////////////////////////////////////////////////////////
+
+JS FUNCTION
+<h2>JavaScript Function</h2>
+
+<button onclick="alert('WALA SA FUNCTION!');">Not Function</button>
+
+<button onclick="myFunction()">in function</button>
+
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Tagname</h2>
+    <p> Finding html Tagname</p>
+    <p>Second tagname</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Get all the elements in the document with a specific tag name
+        const element = document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML ='This is the second tag Name; ' + element[1].innerHTML ;
+        
+
+    </script>
+    <br /> <br />
+    <!--------------------------------------->
+    <h2>JS Classname</h2>
+
+    <p class="samp">Finding html classname</p>
+    <p class="samp1">Second Classname</p>
+
+    <p id="demo1"> </p>
+
+    <script>
+        const lusi = document.getElementsByClassName("samp");
+        document.getElementById("demo1").innerHTML = lusi[1].innerHTML;
+
+    </script>
+</body>
+</html>

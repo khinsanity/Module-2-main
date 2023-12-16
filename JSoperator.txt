@@ -1,0 +1,89 @@
+__________________________________________________________________________________
+Strict Not Equal to Operator
+<p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script> 
+
+const a = 2, b = 'hello';
+
+// strict not equal operator
+document.getElementById("demo").innerHTML=(a !== 2); // false
+document.getElementById("demo1").innerHTML=(a !== '2'); // true
+document.getElementById("demo2").innerHTML=(b !== 'Hello'); // true
+    
+    
+    </script>
+
+!== evaluates to true if the operands are strictly not equal. It's the complete opposite of strictly equal ===.
+
+In the above example, 2 !== '2' gives true. It's because their types are different even though they have the same value.
+
+________________________________________________________________________________
+
+Logical AND Operator
+ <p id="demo"> </p>
+
+
+
+<script>
+const a = true, b = false;
+const c = 4;
+
+// logical AND
+console.log(a && a); // true
+console.log(a && b);  // false
+
+document.getElementById("demo").innerHTML= ((c == 4) && (c == 4)); 
+
+</script>
+
+&& evaluates to true if both the operands are true, else evaluates to false.
+
+Note: You can also use logical operators with numbers. In JavaScript, 0 is false and all non-zero values are true.
+
+__________________________________________________________________________
+
+Logical OR Operator
+
+<p id="demo"> </p>
+    <p id="demo1"> </p>
+    <p id="demo2"> </p>
+
+
+
+<script>
+const a = true, b = false, c = 4;
+
+
+// logical OR
+document.getElementById("demo").innerHTML=(a || b); // true
+document.getElementById("demo1").innerHTML=(b || b); // false
+document.getElementById("demo2").innerHTML=((c>2) || (c<2)); // true
+
+</script>
+
+|| evaluates to true if either of the operands is true. If both operands are false, the result is false.
+
+___________________________________________________________________________________
+ Logical NOT Operator
+
+<p id="demo"> </p>
+    <p id="demo1"> </p>
+    <p id="demo2"> </p>
+
+
+
+<script>
+const a = true, b = false;
+
+// logical NOT
+document.getElementById("demo").innerHTML=(!a); // false
+document.getElementById("demo1").innerHTML=(!b); // true
+
+</script>
+
+
+
+! evaluates to true if the operand is false and vice-versa.

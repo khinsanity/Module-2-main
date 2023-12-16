@@ -1,0 +1,240 @@
+Script tag
+
+<script>
+          alert("Hello! I am an alert box!");
+    </script>
+
+______________________________________________
+
+External js
+<script src="myScript.js"></script>
+alert("This alert box was called with the onload event");
+
+______________________________________________
+Inline js
+
+<button onclick="alert('Inline JS')">Try it</button>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+How to Display JS
+
+-Innerhtml = replace or put value in html element
+To access an HTML element, JavaScript can use the document.getElementById(id) method.
+The id attribute defines the HTML element. The innerHTML property defines the HTML content:
+
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello WD92P!!!!";
+</script>
+
+_____________________________________________
+
+Using document.write()
+For testing purposes, it is convenient to use document.write():
+
+    <h2>My First Web Page</h2>
+    <p>My first paragraph.</p>
+    
+    <script>
+    document.write("Hello WD92P");
+    </script>
+
+Using document.write() after an HTML document is loaded, will delete all existing HTML:
+
+    <h2>My First Web Page</h2>
+    <p>My first paragraph.</p>
+    
+    <button type="button" onclick="document.write('Nabura na')">Try it</button>
+
+_________________________________________________
+
+Using window.alert()
+You can use an alert box to display data:
+
+<h2>My First Web Page</h2>
+<p>My first paragraph.</p>
+
+<script>
+window.alert('Hello WD92P');
+</script>
+
+OPTIONAL YUNG WINDOW.
+In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional
+
+_____________________________________________________
+
+Using console.log()
+For debugging purposes, you can call the console.log() method in the browser to display data.
+
+  <h2>Activate Debugging</h2>
+
+    
+  <script>
+  console.log('Hello WD92P');
+  </script>
+
+______________________________________________________
+JavaScript Print
+JavaScript does not have any print object or print methods.
+You cannot access output devices from JavaScript.
+The only exception is that you can call the window.print() method in the browser to print the content of the current window.
+
+ <h2>The window.print() Method</h2>
+
+ <p>Click the button to print the current page.</p>
+    
+ <button onclick="window.print()">Print this page</button>
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+AUTOMATICALLY
+    <h1>JavaScript Variables</h1>
+
+    <p>In this example, x, y, and z are undeclared.</p>
+    <p>They are automatically declared when first used.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    x = 90;
+    y = 2;
+    z = x + y;
+    document.getElementById("demo").innerHTML =
+    "The value of z is: " + z;
+    </script>
+
+___________________________________________________________________
+
+VAR / CONST / LET
+Note
+It is considered good programming practice to always declare variables before use.
+From the examples you can guess:
+
+x stores the value 90
+y stores the value 2
+z stores the value 92
+
+    <h1>JavaScript Variables</h1>
+
+    <p>They are declared via var</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+   var x = 90;
+   var y = 2;
+   var z = x + y;
+    document.getElementById("demo").innerHTML =
+    "The value of z is: " + z;
+    </script>
+
+___________________________________________________________________
+
+Mixed Variables
+
+<h1>JavaScript Variables</h1>
+
+<p>In this example, price1, price2, and total are variables.</p>
+
+<p id="demo"></p>
+
+<script>
+const fname = "Jamie";
+const lname = "Delina";
+let final = fname + lname;
+document.getElementById("demo").innerHTML =
+"Name: " + final;
+</script>
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+Algorithm 1: Add two numbers entered by the user
+Step 1: Start
+Step 2: Declare variables num1, num2 and sum. 
+Step 3: Read values num1 and num2. 
+Step 4: Add num1 and num2 and assign the result to sum.
+        sum←num1+num2 
+Step 5: Display sum 
+Step 6: Stop
+
+
+Algorithm 2: Find the largest number among three numbers
+Step 1: Start
+Step 2: Declare variables a,b and c.
+Step 3: Read variables a,b and c.
+Step 4: If a > b
+           If a > c
+              Display a is the largest number.
+           Else
+              Display c is the largest number.
+        Else
+           If b > c
+              Display b is the largest number.
+           Else
+              Display c is the greatest number.  
+Step 5: Stop
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

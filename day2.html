@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 30000px;">
+
+    <h2> JS Tagname </h2>
+
+    <p> Finding html tagname </p>
+    <p> Second tagname </p>
+
+    <p id="demo"> </p>
+
+    <script> 
+    const element = document.getElementsByTagName("p");
+    
+    document.getElementById("demo").innerHTML='the text in second p tag is:' + element[1].innerHTML;
+    
+    </script>
+
+    <br /> <br />
+    <!------------------------------------------------------------------------------>
+
+    <h2> JS Classname </h2>
+
+    <p class="samp"> Finding html classname </p>
+    <p class="samp1"> Second classname </p>
+
+
+    <p id="demo1"> </p>
+
+    <script> 
+
+    const cn = document.getElementsByClassName("samp1");
+
+    document.getElementById("demo1").innerHTML= cn[0].innerHTML;
+    </script>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2> Change attribute </h2>
+
+<img id="image" src="dogz.jpg" width="160" height="120">
+
+<script> 
+
+document.getElementById("image").src = "catz.png";
+
+</script>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2> Change attribute via button </h2>
+
+<h2> Change attribute </h2>
+
+<img id="image1" src="dogz.jpg" width="160" height="120">
+
+<button onclick="myFunction()">Change</button>
+
+<script> 
+
+function myFunction() {
+    document.getElementById("image1").src = "catz.png";
+};
+
+
+</script>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2> Changing html style </h2>
+
+<p id="p1"> Hello world </p>
+<p id="p2">Hello WD92P </p>
+
+<script> 
+document.getElementById("p1").style.fontSize="30px";
+document.getElementById("p1").style.fontFamily="helvetica";
+
+
+document.getElementById("p2").style.color="red";
+
+</script>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2> Changing html style via button</h2>
+
+<h1 id="heading"> My heading</h1>
+
+<button type="button" onclick="document.getElementById('heading').style.fontFamily='courier'">Hello</button>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2> Event OnChange and onclick</h2>
+
+<h2 onclick="this.innerHTML='Hello Team'"> Click in this text! </h2>
+
+<h1> OnChange </h1>
+
+<h3>Steam discount</h3>
+
+<select id="myselect" onchange="myFunction1()">
+    <option value="Steam">Steam</option>
+    <option value="Valve">Valve</option>
+    <option value="Money">Money</option>
+    <option value="No">No</option>
+
+</select>
+
+<p id="demo2"></p>
+
+<script>
+    function myFunction1() {
+        var w = document.getElementById("myselect").value;
+        document.getElementById("demo2").innerHTML =  "You picked this : " +w;
+    };
+
+
+</script>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2>JS Function </h2>
+
+<button onclick="alert('No function')">No function</button>
+<button onclick="myFunction7()">With Function</button>
+
+<script>
+    function myFunction7() {
+        alert("Hello Guys!")
+    }
+
+</script>
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2>Append (Adding)</h2>
+
+<ul id="list">
+    <li> sample input </li>
+    <li> sample input </li>
+</ul>
+<button onclick="myFunction8()">Add item</button>
+
+<script>
+    function myFunction8() {
+        const node = document.createElement("li");
+        const textnode = document.createTextNode("Added input");
+        node.appendChild(textnode);
+        document.getElementById("list").appendChild(node);
+    }
+</script>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2> RemoveChild</h2>
+
+<p id="demo3">Remove Me</p>
+<p id="demo3">Remove Me</p>
+<button onclick="myFunction9()">Remove</button>
+
+<script>
+    function myFunction9() {
+        document.getElementById("demo3").remove();
+        document.getElementById("demo3").remove();
+    }
+
+</script>
+
+<br /> <br />
+<!------------------------------------------------------------------------------>
+
+<h2> RemoveChild with list</h2>
+
+<ul id="list2">
+    <li> Bread</li>
+    <li> Cake</li>
+    <li> Coffee</li>
+</ul>
+
+<button onclick="myFunction10()">Remove</button>
+
+<script>
+    function myFunction10() {
+        const del = document.getElementById("list2");
+        del.removeChild(del.firstElementChild);
+    }
+</script>
+
+
+
+</body>
+</html>

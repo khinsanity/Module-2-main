@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let fruit = 'Apple';
+        {
+            let fruit = 'Orange';
+            document.write(fruit);
+        }
+
+        document.write(fruit);
+    </script>
+
+    <br /> <br />
+
+    <!--------------------------Arrow Function------------------------------->
+
+    <p id="demo"> </p>
+
+    <script>
+        let data = (x, y) => x * y;
+        document.getElementById("demo").innerHTML=data(5, 5);
+    </script>
+    
+
+    <br /> <br />
+
+    <!--------------------------Default Parameter------------------------------->
+
+    <p id="demo1"> </p>
+
+    <script>
+        function myFunction(x, y = 20){
+            return x + y;
+        }
+
+        document.getElementById("demo1").innerHTML=myFunction(5, 5);
+
+    </script>
+
+<br /> <br />
+
+<!--------------------------Rest Parameter------------------------------->
+
+<p id="demo2"> </p>
+
+<script>
+    function sum(...args){
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+    }
+
+    let x = sum(1, 2, 3, 4, 5, 6, 7);
+
+    document.getElementById("demo2").innerHTML=x;
+
+</script>
+
+<br /> <br />
+
+<!--------------------------Spread Operator------------------------------->
+
+<p id="demo3"> </p>
+
+<script>
+
+const numbers = [45,55,12,90,100];
+let maxValue = Math.max(...numbers);
+
+document.getElementById("demo3").innerHTML=maxValue;
+</script>
+
+<br /> <br />
+
+<!--------------------------for of loop------------------------------->
+
+<p id="demo4"> </p>
+
+<script>
+    let language = "HELLOWD92P";
+
+    let text ="";
+    for (let x of language ) {
+        text += x + "<br />";
+    }
+
+    document.getElementById("demo4").innerHTML=text;
+
+
+</script>
+
+<br /> <br />
+
+<!--------------------------string template literal------------------------------->
+
+<p id="demo5"> </p>
+
+<script>
+    let firstname="jamie";
+    let lastname="delina";
+
+    let result= `welcome ${firstname}, ${lastname} !`;
+    
+    document.getElementById("demo5").innerHTML=result;
+
+</script>
+
+
+</body>
+</html>

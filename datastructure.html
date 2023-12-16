@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 3000px;">
+
+    <h3> Js Arrays literal</h3>
+    <p id="p1"> </p>
+    <p id="p2"> </p>
+    <p id="p3"> </p>
+    <p id="p4"> </p>
+    <p id="p5"> </p>
+
+    <script>
+        let stringArray = ["one", "two","three"];
+        let numericArray = [1, 2, 3, 4];
+        let decimalArray = [1.1, 1.2, 1.3];
+        let booleanArray = [true, false, true];
+        let data = [2, "wd92p", true, 5.5];
+
+
+        document.getElementById("p1").innerHTML= stringArray;
+        document.getElementById("p2").innerHTML = numericArray ;
+        document.getElementById("p3").innerHTML = decimalArray;
+        document.getElementById("p4").innerHTML = booleanArray;
+        document.getElementById("p5").innerHTML=data;
+
+    </script>
+
+    <br /> <br />
+
+    <!-------------------------------------------------------------->
+    <h3> Js Stack Method</h3>
+
+    <p id="demo"> </p>
+    <p id="demo1"> </p>
+
+    <script>
+        class Stack {
+            constructor() {
+                this.items = [];
+            }
+
+            add(element) {
+                return this.items.push(element);
+            }
+
+            remove() {
+                return this.items.pop();
+            }
+
+            size() {
+                return this.items.length;
+            }
+
+        } 
+
+        let stack = new Stack();
+        stack.add(1);
+        stack.add(2);
+        stack.add(4);
+        stack.add(8);
+        stack.add(10);
+
+        document.getElementById("demo").innerHTML=stack.items;
+
+        stack.remove();
+        document.getElementById("demo1").innerHTML=stack.items;
+
+        document.write(stack.size());
+    </script>
+
+<br /> <br />
+
+<!-------------------------------------------------------------->
+<h3> Js QUEUE Method</h3>
+
+<p id="demo2"> </p>
+<p id="demo3"> </p>
+
+<script>
+
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+
+    enqueue(element){
+        return  this.items.push(element);
+    }
+
+    dequeue() {
+        if(this.items.length > 0 ) {
+            return this.items.shift();
+        }
+    }
+
+
+}
+
+let queue = new Queue();
+queue.enqueue(100);
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.enqueue(4);
+queue.enqueue(10);
+queue.enqueue(20);
+document.getElementById("demo2").innerHTML=queue.items;
+
+queue.dequeue();
+document.getElementById("demo3").innerHTML=queue.items;
+
+</script>
+
+
+<br /> <br />
+
+<!-------------------------------------------------------------->
+<h3> Js RecursionFunction</h3>
+
+<script>
+    function countDown(number){
+
+        //display number
+        document.write(number + "<br />");
+
+        //decrease the number value
+        const newNumber = number - 1;
+
+        //base case
+        if (newNumber > 0) {
+                countDown(newNumber);
+        }
+
+    }
+
+    countDown(10);
+</script>
+
+<br /> <br />
+
+<!-------------------------------------------------------------->
+<h3> Js Linear Search</h3>
+
+<script>
+    linearS = (arraynum, value) => {
+        for (let i=0;  i < arraynum.length; i++ ){
+            if (arraynum[i] === value ) {
+                return arraynum[i];
+                document.write(arraynum[i])
+            
+            }
+        }
+
+        return "VALUE NOT FOUND"
+    }
+
+    document.write(linearS([1,2,3,4,5,6,7,8,9,20], 90));
+
+
+</script>
+
+<br /> <br />
+
+<!-------------------------------------------------------------->
+<h3> Js Parsing</h3>
+
+<script>
+let PInfo = '{"name": "Jamie", "age":27, "location": "valenzuela"}';
+const objPinfo = JSON.parse(PInfo);
+
+document.write("My name is " + objPinfo.name + " and i'm " + objPinfo.age + "years old");
+
+</script>
+
+<br /> <br />
+
+<!-------------------------------------------------------------->
+<h3> Linked list</h3>
+
+<script>
+
+    class ListNode {
+        constructor(data){
+            this.data = data
+            this.next = null
+        }
+    }
+
+    class Linkedlist {
+        constructor(head = null) {
+            this.head = head
+        }
+    }
+
+    let node1 = new ListNode(2)
+    let node2 = new ListNode(4)
+    node1.next = node2
+
+    let list = new Linkedlist(node1)
+    document.write(list.head.next.data)
+    
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

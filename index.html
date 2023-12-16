@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2> Innerhtml</h2>
+
+    <p>First Paragraph</p>
+
+    <p id="demo"> </p>
+    <p id="demo1">sddsada</p>
+
+
+    <script> 
+    document.getElementById("demo").innerHTML= "Hello WD92P!!!!";
+
+    document.getElementById("demo1").innerHTML="Second P tag";
+    </script>
+
+    <br />  <br /> 
+
+    <!--------------------------------------------------------------------->
+    <h2>Document.write</h2>
+
+    <p>First Paragraph</p>
+ 
+    <button type="button" onclick="document.write('Nabura')"> Try it </button>
+
+    <br />  <br /> 
+
+    <!--------------------------------------------------------------------->
+    <h2>Window.alert</h2>
+
+    <p>First Paragraph</p>
+
+    <script> 
+        //alert('Hello WD92P!!');
+
+    </script>
+
+<br />  <br /> 
+
+<!--------------------------------------------------------------------->
+<h2>Console.log</h2>
+
+<p>First Paragraph</p>
+
+<script> 
+console.log('Sample Output');
+
+</script>
+
+<br />  <br /> 
+
+<!--------------------------------------------------------------------->
+<h2>JS Variables</h2>
+
+<p>First Paragraph</p>
+
+<p id="demo2"> </p>
+
+<script> 
+const x = 90;
+const y = 2;
+const s = x + y;
+
+
+document.getElementById("demo2").innerHTML= "The value of s is:" + s;
+</script>
+
+<br />  <br /> 
+
+<!--------------------------------------------------------------------->
+<h2>MIX Variables</h2>
+
+<p>First Paragraph</p>
+
+<p id="demo3"> </p>
+
+
+
+<script> 
+ const fname="Jamie";
+ const lname="Delina";
+ let fullname = fname + lname;
+
+
+    document.getElementById("demo3").innerHTML= "Name: " + fullname;
+
+</script>
+
+</body>
+</html>
